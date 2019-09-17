@@ -332,7 +332,7 @@
             .domain([0, d3.max(dataset,d=>d.Count)+80]) //0-tól legnagyobb elemig
             .range([height, 0]); //átszámolás 400-as skálára
 	 
-	g.selectAll(null)       
+	/*g.selectAll(null)       
       .data(dataset)       
       .enter()       
       .append("text")  
@@ -340,7 +340,7 @@
 	  	.attr("text-anchor","middle")
       .text((d) => d.Count)
 		.attr("y",d=>y(d.Count)-3)
-	   .attr("x",(d)=>x(d.Month)+4);
+	   .attr("x",(d)=>x(d.Month)+4);*/
 	 
 	 
 	let leftAxis=d3.axisLeft(y)
