@@ -2,17 +2,33 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Statisztika</title>
+	<title>Document</title>
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
 	<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
 	<script src="https://d3js.org/d3.v5.js"></script>
+	</script>
 </head>
 <body>
-<img src="awsomepharma.png" alt="d">
 	<div class="wrapper">
-			<div class="div1" ></div>
-			<div class="div2" ></div>
+			<div class="div1"></div>
+			<div class="div2">
+				<textarea name="array" id="data" onchange ="myFunction()" cols="30" rows="41">[{"Month": "2013_09",
+    "Count": 1
+  },
+  {
+    "Month": "2013_10",
+    "Count": 291
+  },
+  {
+    "Month": "2013_11",
+    "Count": 763
+  }]</textarea>
+				<button type="button" id="refresh" class="btn btn-success
+">Diagram frissítése</button>
 		</div>
+	</div>
 <script src="https://d3js.org/d3.v5.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="script.js"></script>
