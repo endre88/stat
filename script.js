@@ -1,9 +1,45 @@
 
 
+document.getElementById("ytitle").addEventListener("click",function(){
+	return document.getElementById("inputy").value;
+});
+
+
+
+
+
+
+	
+
+
 document.getElementById("refresh").addEventListener("click", soldunitsrevenue2)
 	
 function soldunitsrevenue2(){
 	d3.select("#SVG").remove();
+	document.getElementById("xtitle").addEventListener("click",function(){
+		d3.select('.x_label').remove();
+		xx=document.getElementById("inputx").value;
+		g.append("text")
+	  	.attr("class","x_label")
+	  	.attr("x", width/2)
+	  	.attr("y", height+70)
+	  	.attr("font-size","20px")
+	  	.attr("text-anchor","middle")
+	  	.text(xx)
+		
+});
+	document.getElementById("ytitle").addEventListener("click",function(){
+	d3.select('.y_label').remove();
+	yy=document.getElementById("inputy").value;
+	g.append("text")
+	  	.attr("class","y_label")
+	  	.attr("x", -height/2+50)
+	  	.attr("y", -40)
+	  	.attr("font-size","20px")
+	  	.attr("text-anchor","end")
+	  	.text(yy)
+	  	.attr("transform","rotate(-90)")
+	});
 	var v=document.getElementById("data").value;
 	var obj = JSON.parse(v); //text-ből objektummá
 	/*let dataset=[
@@ -313,22 +349,6 @@ function soldunitsrevenue2(){
 	let g=svg.append("g")
 		.attr("transform","translate(" +margin.left+ ", " +margin.top+ ")");
 
-	g.append("text")
-	  	.attr("class","x label")
-	  	.attr("x", width/2)
-	  	.attr("y", height+76)
-	  	.attr("font-size","20px")
-	  	.attr("text-anchor","middle")
-	  	.text("Hónapok")
-
-	 g.append("text")
-	  	.attr("class","y label")
-	  	.attr("x", -height/2+50)
-	  	.attr("y", -40)
-	  	.attr("font-size","20px")
-	  	.attr("text-anchor","end")
-	  	.text("Hibajegyek száma")
-	  	.attr("transform","rotate(-90)")
 	  
 	let x = d3.scaleBand() //vízszintes kiterjedés megadása
 				.domain(dataset.map(d=>d.Month))  //vízszintes elemek adata
@@ -383,4 +403,3 @@ function soldunitsrevenue2(){
 
   };
 	soldunitsrevenue2();
-
