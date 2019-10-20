@@ -5,7 +5,15 @@
 	<title>Diagram készítő alkalmazás</title>
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-56836280-9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'UA-56836280-9');
+</script>
 	<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
 	<script src="https://d3js.org/d3.v5.js"></script>
 	</script>
@@ -15,26 +23,16 @@
 	<div class="wrapper">
 			<div class="div1"></div>
 			<div class="div2">
-				<textarea name="array" id="data" onchange ="myFunction()" cols="30" rows="41">[{"Month": "2013_09",
-    "Count": 1
-  },
-  {
-    "Month": "2013_10",
-    "Count": 291
-  },
-  {
-    "Month": "2013_11",
-    "Count": 763
-  }]</textarea>
+				<textarea name="array" id="data" onchange ="myFunction()" cols="30" rows="41">[{"Month": "2013_09","Count": 1},
+				{"Month": "2013_10", "Count": 291},{"Month": "2013_11","Count": 763}]</textarea>
 				<div id="variable">
-				<button type="button" id="refresh" class="btn btn-success
-">Diagram frissítése</button>
-				<input type="text" class="input" id="inputy">
-				<button id="ytitle" class="btn btn-success">Bal skála felirata</button>
-				<input type="text" class="input" id="inputx">
-				<button id="xtitle" class="btn btn-success">Alsó skála felirata</button></div>
-	
-		</div>
+					<button type="button" id="refresh" class="btn btn-success">Diagram frissítése</button>
+					<input type="text" class="input" id="inputy">
+					<button id="ytitle" class="btn btn-success">Bal skála felirata</button>
+					<input type="text" class="input" id="inputx">
+					<button id="xtitle" class="btn btn-success">Alsó skála felirata</button>
+				</div>
+			</div>
 	</div>
 <script src="https://d3js.org/d3.v5.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
